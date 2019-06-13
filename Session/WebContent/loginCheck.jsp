@@ -17,8 +17,9 @@
 			response.sendRedirect("result.jsp");
 			
 		}else{
-			response.sendRedirect("input.jsp");
+			response.sendRedirect("inpdddut.jsp");
 		}
+		
 				
 	%>
 </body>
