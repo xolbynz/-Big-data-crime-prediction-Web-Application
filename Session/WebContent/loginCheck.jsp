@@ -20,7 +20,7 @@
 			response.sendRedirect("input.jsp");
 			
 		}
-		
+		System.out.print("¤·¤·");
 				
 	%>
 </body>
