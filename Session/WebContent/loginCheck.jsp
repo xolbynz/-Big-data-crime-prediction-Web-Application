@@ -18,7 +18,9 @@
 			
 		}else{
 			response.sendRedirect("input.jsp");
+			
 		}
+		
 				
 	%>
 </body>
