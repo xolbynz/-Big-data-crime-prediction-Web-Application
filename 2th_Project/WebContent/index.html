@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>BLOCKS - Bootstrap Dashboard Theme</title>
+<title>Safety-First System</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="Carlos Alvarez - Alvarez.is">
@@ -51,10 +51,8 @@ body {
 
 
 <!-- Google Fonts call. Font Used Open Sans & Raleway -->
-<link href="http://fonts.googleapis.com/css?family=Raleway:400,300"
-	rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Open+Sans"
-	rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,300" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
 
 <script type="text/javascript">
     $(document).ready(function () {
@@ -87,8 +85,25 @@ body {
     });
 
 </script>
+<script language="javascript">
+    function showClock(){
+        var currentDate = new Date();
+        var divClock = document.getElementById("divClock");
+         
+        var msg = currentDate.getFullYear()+" .";
+        msg += currentDate.getMonth()+" .";
+        msg += currentDate.getDay()+"\n";
+        msg += currentDate.getHours()+" : ";
+        msg += currentDate.getMinutes()+" : ";
+        msg += currentDate.getSeconds()+"";
+         
+        
+        divClock.innerText = currentDate;
+        setTimeout(showClock,1000);
+    }
+</script>
 </head>
-<body>
+<body onload="showClock()">
 
 	<!-- NAVIGATION MENU -->
 
@@ -100,8 +115,7 @@ body {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.html"><img
-					src="images/logo30.png" alt=""> BLOCKS Dashboard</a>
+				<a class="navbar-brand" href="index.html"><span><img src="images/logo30.png" alt=""></span> SF-SYS</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -109,8 +123,6 @@ body {
 							class="icon-home icon-white"></i> Home</a></li>
 					<li><a href="tables.html"><i class="icon-th icon-white"></i>
 							Tables</a></li>
-					<li><a href="login.html"><i class="icon-lock icon-white"></i>
-							Login</a></li>
 					<li><a href="user.html"><i class="icon-user icon-white"></i>
 							User</a></li>
 
@@ -128,7 +140,7 @@ body {
 			<!-- USER PROFILE BLOCK -->
 			<div class="col-sm-3 col-lg-3">
 				<div class="dash-unit">
-					<dtitle>User Profile</dtitle>
+					<dtitle>Calendar</dtitle>
 					<hr>
 					<div class="thumbnail">
 						<img src="images/face80x80.jpg" alt="Marcel Newman"
@@ -173,8 +185,11 @@ body {
 				<div class="half-unit">
 					<dtitle>Local Time</dtitle>
 					<hr>
-					<div class="clockcenter">
-						<digiclock>12:45:25</digiclock>
+					<div class="clockcenter" >
+						<digiclock id='divClock' class="clock"> 
+							
+						</digiclock>
+						
 					</div>
 				</div>
 
