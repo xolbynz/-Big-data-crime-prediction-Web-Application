@@ -299,7 +299,7 @@ input[type=text], textarea {
 }
 
 textarea {
-	line-height: 18px;
+	line-height: 30px;
 	padding: 18px;
 	width: 100%;
 	text-indent: 0;
