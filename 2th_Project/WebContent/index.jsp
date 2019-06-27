@@ -277,9 +277,8 @@ td : {
 					<hr>
 					<div class="cont">
 						<p>
-							<img src="images/up.png" alt="">
-							<bold>Up</bold>
-							| 356ms.
+							
+							
 						</p>
 					</div>
 				</div>
