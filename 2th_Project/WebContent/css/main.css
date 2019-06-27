@@ -54,6 +54,19 @@ h5 {
 /***********BLOCKS & WRAPS***********/
 
 /*--- Dash Unit / Used in Dashboard page ---*/
+
+
+.dash-unit {
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+	border: 1px solid #383737;
+	background-image: url('../images/sep-half.png');
+	background-color: #3d3d3d;
+	color: white;
+	height: 290px;
+}
+
+
 .dash-unit {
 	margin-bottom: 30px;
 	padding-bottom: 10px;
@@ -349,7 +362,7 @@ textarea {
 
 /**********Clock Configuration**********/
 digiclock {
-	font-size: 20px;
+	font-size: 30px;
 	color: #fff;
 	text-align: center;
 	margin-left: auto;
@@ -365,11 +378,12 @@ digiclock {
 	cursor: default;
 }
 
-.framemail .window {
+.dash-unit .window {
 	font-size: 0;
 	margin-top: -1px;
 	overflow: hidden;
 	margin-left: -18px;
+	
 }
 
 .framemail .window .mail li {
@@ -856,7 +870,7 @@ a:hover {
 }
 
 #calendar {
-	width: 100%;
+	width: 100%; 
 }
 
 /**********Media Styles**********/
@@ -895,3 +909,7 @@ a:hover {
 		}
 	}
 }
+
+
+/**********Calendar Styles**********/
+
