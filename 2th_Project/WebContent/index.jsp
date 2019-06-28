@@ -1,4 +1,5 @@
 
+<%@page import="af.Weather"%>
 <%@page import="af.Test01"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
@@ -48,7 +49,7 @@ body {
 }
 
 table {
-	background-color: #4f4f4f;
+	background-color: #3d3d3d;
 	border-spacing: 0px 0px;
 }
 
@@ -200,7 +201,7 @@ td : {
 				<div class="dash-unit">
 					<dtitle>Calendar</dtitle>
 					<hr style="margin-bottom: 13px">
-					<div>
+					<div style="width: 90%;margin: 0px auto;">
 						<table id="calendar" boarder="3" align="center">
 							<tr>
 								<td><label onclick="prevCalendar()"> < </label></td>
@@ -277,7 +278,14 @@ td : {
 					<hr>
 					<div class="cont">
 						<p>
-							
+							<p >
+
+							<% Weather weather = new Weather();
+							 	weather.crw2(request, response);
+							 	
+							 %>
+							<%= session.getAttribute("weather")%><br><br>
+						</p>
 							
 						</p>
 					</div>
@@ -350,7 +358,7 @@ td : {
 					</div>
 					<br>
 					<div class="text">
-						<p style="height: 500px;">
+						<p >
 
 							<% Test01 t = new Test01();
 							 	t.crw(request, response);
