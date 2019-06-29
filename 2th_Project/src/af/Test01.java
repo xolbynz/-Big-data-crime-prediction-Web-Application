@@ -15,8 +15,6 @@ import org.jsoup.select.Elements;
 
 public class Test01 {
 
-	
-	
 	public void crw(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
 		String url = "https://www.bbc.co.uk/search?q=murder&filter=news&suggid=";
 		Document doc = null;
@@ -25,18 +23,11 @@ public class Test01 {
 		try {
 			doc = Jsoup.connect(url).get();
 
-			Elements element = doc.select("div h1 a");
-
+			Elements element = doc.select("article > div > h1 > a");
+			 
 			for (Element el : element) {
 				list.add(el.text());
 			}
-				
-	
-			int len = (int)(Math.random()*list.size());
-			
-			String s = list.get(len);
-			
-			
 			
 			HttpSession session = request.getSession();
 			

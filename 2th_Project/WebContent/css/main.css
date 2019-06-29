@@ -311,6 +311,19 @@ input[type=text], textarea {
 	margin: 0 0 18px;
 }
 
+input[type=password], textarea {
+	background: #cdcbcc;
+	font-size: 13px;
+	display: block;
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	line-height: 18px;
+	padding: 0;
+	text-indent: 18px;
+	margin: 0 0 18px;
+}
+
 textarea {
 	line-height: 30px;
 	padding: 18px;

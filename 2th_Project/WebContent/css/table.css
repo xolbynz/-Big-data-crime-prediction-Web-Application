@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  File:         demo_table.css
  *  CVS:          $Id$
  *  Description:  CSS descriptions for DataTables demo pages
@@ -217,7 +217,7 @@ table.display tr.odd.gradeA {
 }
 
 table.display tr.even.gradeA {
-	background-color: #eeffee;
+	background-color: #ffffff;
 }
 
 table.display tr.odd.gradeC {

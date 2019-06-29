@@ -49,8 +49,9 @@ body {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp"><span> <img
-						src="images/logo30.png" alt=""></span> SF-SYS</a>
+				<a class="navbar-brand" href="index.jsp" style="padding: 0px;    padding-right: 20px;
+    padding-top: 5px;"><span> <img
+						src="images/img2.png" width="75px" alt="img error"></span></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -137,7 +138,7 @@ body {
 							<!-- email -->
 							<label>E-mail</label> <input class="input-huge" type="text">
 							<!-- password -->
-							<label>Password</label> <input class="input-huge" type="text">
+							<label>Password</label> <input class="input-huge" type="password">
 
 						</div>
 

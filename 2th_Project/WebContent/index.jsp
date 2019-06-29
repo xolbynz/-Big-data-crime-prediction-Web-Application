@@ -17,15 +17,15 @@
 
 <link href="css/main.css" rel="stylesheet">
 <link href="css/font-style.css" rel="stylesheet">
-<link href="css/flexslider.css" rel="stylesheet">
+<!-- <link href="css/flexslider.css" rel="stylesheet">
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="js/lineandbars.js"></script>
+ -->
+<!-- <script type="text/javascript" src="js/lineandbars.js"></script>
 
 <script type="text/javascript" src="js/dash-charts.js"></script>
-<script type="text/javascript" src="js/gauge.js"></script>
+<script type="text/javascript" src="js/gauge.js"></script> -->
 
 <!-- NOTY JAVASCRIPT -->
 <script type="text/javascript" src="js/noty/jquery.noty.js"></script>
@@ -132,8 +132,8 @@ td : {
 		var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); // 이번 달의 마지막 날
 		var tblCalendar = document.getElementById("calendar"); // 테이블 달력을 만들 테이블
 		var tblCalendarYM = document.getElementById("calendarYM"); // yyyy년 m월 출력할 곳
-		tblCalendarYM.innerHTML = today.getFullYear() + "년 "
-				+ (today.getMonth() + 1) + "월"; // yyyy년 m월 출력
+		tblCalendarYM.innerHTML = today.getFullYear() + ". "
+				+ (today.getMonth() + 1) + ""; // yyyy년 m월 출력
 		// 기존 테이블에 뿌려진 줄, 칸 삭제
 
 		while (tblCalendar.rows.length > 2) {
@@ -159,6 +159,96 @@ td : {
 	}
 </script>
 
+<!-- 구글 차트 작년 범죄율 -->
+<script type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	google.charts.load("current", {
+		packages : [ "corechart" ]
+	});
+	google.charts.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+				[ 'Task', 'Hours per Day' ],
+				[ '', 20208  ],
+				[ '', 95883-20208 ],
+
+		]);
+
+		var options = {
+				legend : 'none',
+    			pieSliceText : 'none',
+    			pieHole : 0.68,
+    			chartArea : {
+    				'width' : '100%',
+    				'height' : '80%'
+    			},
+    			backgroundColor : "transparent",
+    			slices : {
+    				0 : {
+    					color : '#B2C831'
+    				},
+    				1 : {
+    					color : '#3D3D3D'
+    				}
+    			},
+    			fontSize : 15,
+    			//pieStartAngle : 100,
+
+		};
+
+		var chart = new google.visualization.PieChart(document
+				.getElementById('B_rate'));
+		chart.draw(data, options);
+
+	}
+</script>
+
+<!-- 구글차트 올해 범죄율 -->
+<script type="text/javascript"
+	src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+	google.charts.load("current", {
+		packages : [ "corechart" ]
+	});
+	google.charts.setOnLoadCallback(drawChart);
+	function drawChart() {
+		var data = google.visualization.arrayToDataTable([
+				[ 'Task', 'Hours per Day' ],
+				[ '', 20208  ],
+				[ '', 95883-20208 ],
+
+		]);
+
+		var options = {
+				legend : 'none',
+    			pieSliceText : 'none',
+    			pieHole : 0.68,
+    			chartArea : {
+    				'width' : '100%',
+    				'height' : '80%'
+    			},
+    			backgroundColor : "transparent",
+    			slices : {
+    				0 : {
+    					color : '#B2C831'
+    				},
+    				1 : {
+    					color : '#3D3D3D'
+    				}
+    			},
+    			fontSize : 15,
+    			//pieStartAngle : 100,
+
+		};
+
+		var chart = new google.visualization.PieChart(document
+				.getElementById('C_rate'));
+		chart.draw(data, options);
+
+	}
+</script>
+
 <link href="css/watch.css" rel="stylesheet" />
 </head>
 <body>
@@ -173,8 +263,9 @@ td : {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp"><span><img
-						src="images/logo30.png" alt=""></span> SF-SYS</a>
+				<a class="navbar-brand" href="index.jsp" style="padding: 0px;    padding-right: 20px;
+    padding-top: 5px;"><span><img 
+						src="images/img2.png" width="75px" alt="img error"></span></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
@@ -201,21 +292,21 @@ td : {
 				<div class="dash-unit">
 					<dtitle>Calendar</dtitle>
 					<hr style="margin-bottom: 13px">
-					<div style="width: 90%;margin: 0px auto;">
+					<div style="width: 90%; margin: 0px auto;">
 						<table id="calendar" boarder="3" align="center">
 							<tr>
 								<td><label onclick="prevCalendar()"> < </label></td>
-								<td colspan="5" align="center" id="calendarYM">yyyy년 m월</td>
+								<td colspan="5" align="center" id="calendarYM">yyyy. m</td>
 								<td><label onclick="nextCalendar()"> > </label></td>
 							</tr>
 							<tr>
-								<td align="center">일</td>
-								<td align="center">월</td>
-								<td align="center">화</td>
-								<td align="center">수</td>
-								<td align="center">목</td>
-								<td align="center">금</td>
-								<td align="center">토</td>
+								<td align="center" style="color: red;">Su</td>
+								<td align="center">Mo</td>
+								<td align="center">Tu</td>
+								<td align="center">We</td>
+								<td align="center">Th</td>
+								<td align="center">Fr</td>
+								<td align="center" style="color: blue;">Sa</td>
 							</tr>
 
 						</table>
@@ -229,20 +320,21 @@ td : {
 			<!-- DONUT CHART BLOCK -->
 			<div class="col-sm-3 col-lg-3">
 				<div class="dash-unit">
-					<dtitle>Site Bandwidth</dtitle>
+					<dtitle>2018 Crime Rate</dtitle>
 					<hr>
-					<div id="load"></div>
-					<h2>45%</h2>
+					<div id="B_rate"></div>
+					<h2>21.1%</h2>
 				</div>
 			</div>
 
 			<!-- DONUT CHART BLOCK -->
 			<div class="col-sm-3 col-lg-3">
 				<div class="dash-unit">
-					<dtitle>Disk Space</dtitle>
+					<dtitle>2019 Crime Rate</dtitle>
 					<hr>
-					<div id="space"></div>
-					<h2>65%</h2>
+					<div id="C_rate"></div>
+					<h2>11%</h2>
+
 				</div>
 			</div>
 
@@ -275,19 +367,34 @@ td : {
 				<!-- SERVER UPTIME -->
 				<div class="half-unit">
 					<dtitle>Current Weather</dtitle>
-					<hr>
-					<div class="cont">
-						<p>
-							<p >
+					<hr style="margin-bottom: 10px;">
+					<div class="cont" align="center" style="margin-top: 15px;">
 
-							<% Weather weather = new Weather();
-							 	weather.crw2(request, response);
-							 	
-							 %>
-							<%= session.getAttribute("weather")%><br><br>
+						<p style="margin: 0px;">
+
+							<%
+								Weather weather = new Weather();
+								weather.newyork(request, response);
+							%>
+							<%=session.getAttribute("weat_img")%>
 						</p>
-							
+
+						<p style="margin-left: 40px;">
+							<%-- <%= session.getAttribute("time")%> --%>
+							<%=session.getAttribute("weat_text")%><br> 온도 :
+							<%=session.getAttribute("tm")%><br> 습도 :
+							<%=session.getAttribute("hm")%><br> 풍속 :
+							<%=session.getAttribute("ws")%><br>
+
+
+							<%-- 맨해튼 날씨 : <%= session.getAttribute("manhattan")%><br>
+							브루클린 날씨 : <%= session.getAttribute("brooklyn")%><br>
+							퀸스 날씨 : <%= session.getAttribute("queens")%><br>
+							브롱크스 날씨 : <%= session.getAttribute("bronx")%><br>
+							스태튼 날씨 : <%= session.getAttribute("staten")%><br> --%>
 						</p>
+
+
 					</div>
 				</div>
 
@@ -304,6 +411,7 @@ td : {
 				<dtitle>Crime Map</dtitle>
 				<hr style="margin-bottom: 0px">
 				<iframe src="map_ver5.html" width="100%" height="470px"> </iframe>
+
 
 			</div>
 			<!-- /dash-unit -->
@@ -357,19 +465,28 @@ td : {
 						<span aria-hidden="true" class="li_news fs2"></span>
 					</div>
 					<br>
-					<div class="text">
-						<p >
+					<div class="text" >
+					<!-- bbc new crawling  -->
+						<%-- <p>
 
-							<% Test01 t = new Test01();
-							 	t.crw(request, response);
-							 	
-							 %>
-							<%= session.getAttribute("list_len")%><br><br>
-							<%=session.getAttribute("list_len1")%><br><br>
-							<%=session.getAttribute("list_len2")%><br><br>
-							<%=session.getAttribute("list_len3")%><br><br>
+							<%
+								Test01 t = new Test01();
+								t.crw(request, response);
+							%>
+							1.
+							<%=session.getAttribute("list_len")%><br> <br> 2.
+							<%=session.getAttribute("list_len1")%><br> <br> 3.
+							<%=session.getAttribute("list_len2")%><br> <br> 4.
+							<%=session.getAttribute("list_len3")%><br> <br>
 
-						</p>
+						</p> --%>
+						<p><a style="color: white;" href="https://www.bbc.com/news/uk-wales-48797659">1. Anglesey crossbow death: Man, 38, charged with murder</a> </p>
+						<p><a style="color: white;" href="https://www.bbc.com/news/uk-england-northamptonshire-48802599">2. Little Harrowden death: Fifth person charged with murder</a></p>
+						<p><a style="color: white;" href="https://www.bbc.com/news/uk-england-hereford-worcester-48790953">3. Droitwich murder: Police search for dog walker</a></p>
+						<p><a style="color: white;" href="https://www.bbc.co.uk/news/uk-england-london-48787365">4. Abdi Ali murder: Man jailed for 'body in attic' murder</a></p>
+
+
+
 					</div>
 				</div>
 			</div>
@@ -380,6 +497,100 @@ td : {
 
 
 
+	</div>
+
+
+	<div style="visibility: hidden;" align="center" id="footerwrap">
+
+		<div style="float: left;">
+			<!-- 맨하튼 -->
+			<p>
+				<%
+					weather.manhattan(request, response);
+				%>
+				<%=session.getAttribute("weat_img")%>
+			</p>
+
+			<p style="margin-left: 40px;">
+				도시 :<%=session.getAttribute("city")%><br>
+				<%=session.getAttribute("weat_text")%><br> 온도 :
+				<%=session.getAttribute("tm")%><br> 습도 :
+				<%=session.getAttribute("hm")%><br> 풍속 :
+				<%=session.getAttribute("ws")%><br>
+			</p>
+		</div>
+
+		<div style="float: left;">
+			<!-- 브룩클린 -->
+			<p>
+				<%
+					weather.Brooklyn(request, response);
+				%>
+				<%=session.getAttribute("weat_img")%>
+			</p>
+
+			<p style="margin-left: 40px;">
+				도시 :<%=session.getAttribute("city")%><br>
+				<%=session.getAttribute("weat_text")%><br> 온도 :
+				<%=session.getAttribute("tm")%><br> 습도 :
+				<%=session.getAttribute("hm")%><br> 풍속 :
+				<%=session.getAttribute("ws")%><br>
+			</p>
+		</div>
+
+		<div style="float: left;">
+			<!-- 퀸스 -->
+			<p>
+				<%
+					weather.Queens(request, response);
+				%>
+				<%=session.getAttribute("weat_img")%>
+			</p>
+
+			<p style="margin-left: 40px;">
+				도시 :<%=session.getAttribute("city")%><br>
+				<%=session.getAttribute("weat_text")%><br> 온도 :
+				<%=session.getAttribute("tm")%><br> 습도 :
+				<%=session.getAttribute("hm")%><br> 풍속 :
+				<%=session.getAttribute("ws")%><br>
+			</p>
+		</div>
+
+		<div style="float: left;">
+			<!-- 브롱스 -->
+			<p>
+				<%
+					weather.Bronx(request, response);
+				%>
+				<%=session.getAttribute("weat_img")%>
+			</p>
+
+			<p style="margin-left: 40px;">
+				도시 :<%=session.getAttribute("city")%><br>
+				<%=session.getAttribute("weat_text")%><br> 온도 :
+				<%=session.getAttribute("tm")%><br> 습도 :
+				<%=session.getAttribute("hm")%><br> 풍속 :
+				<%=session.getAttribute("ws")%><br>
+			</p>
+		</div>
+
+		<div style="float: left;">
+			<!-- 스태튼 -->
+			<p>
+				<%
+					weather.Staten(request, response);
+				%>
+				<%=session.getAttribute("weat_img")%>
+			</p>
+
+			<p style="margin-left: 40px;">
+				도시 :<%=session.getAttribute("city")%><br>
+				<%=session.getAttribute("weat_text")%><br> 온도 :
+				<%=session.getAttribute("tm")%><br> 습도 :
+				<%=session.getAttribute("hm")%><br> 풍속 :
+				<%=session.getAttribute("ws")%><br>
+			</p>
+		</div>
 	</div>
 	<!-- /container -->
 	<!-- <div id="footerwrap">
@@ -399,6 +610,5 @@ td : {
 		/container
 	</div> -->
 	<!-- /footerwrap -->
-
 </body>
 </html>
