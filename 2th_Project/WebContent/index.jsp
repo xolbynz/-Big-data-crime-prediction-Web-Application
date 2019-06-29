@@ -169,31 +169,30 @@ td : {
 	google.charts.setOnLoadCallback(drawChart);
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-				[ 'Task', 'Hours per Day' ],
-				[ '', 20208  ],
-				[ '', 95883-20208 ],
+				[ 'Task', 'Hours per Day' ], [ '', 20208 ],
+				[ '', 95883 - 20208 ],
 
 		]);
 
 		var options = {
-				legend : 'none',
-    			pieSliceText : 'none',
-    			pieHole : 0.68,
-    			chartArea : {
-    				'width' : '100%',
-    				'height' : '80%'
-    			},
-    			backgroundColor : "transparent",
-    			slices : {
-    				0 : {
-    					color : '#B2C831'
-    				},
-    				1 : {
-    					color : '#3D3D3D'
-    				}
-    			},
-    			fontSize : 15,
-    			//pieStartAngle : 100,
+			legend : 'none',
+			pieSliceText : 'none',
+			pieHole : 0.68,
+			chartArea : {
+				'width' : '100%',
+				'height' : '80%'
+			},
+			backgroundColor : "transparent",
+			slices : {
+				0 : {
+					color : '#B2C831'
+				},
+				1 : {
+					color : '#3D3D3D'
+				}
+			},
+			fontSize : 15,
+		//pieStartAngle : 100,
 
 		};
 
@@ -214,31 +213,30 @@ td : {
 	google.charts.setOnLoadCallback(drawChart);
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-				[ 'Task', 'Hours per Day' ],
-				[ '', 20208  ],
-				[ '', 95883-20208 ],
+				[ 'Task', 'Hours per Day' ], [ '', 20208 ],
+				[ '', 95883 - 20208 ],
 
 		]);
 
 		var options = {
-				legend : 'none',
-    			pieSliceText : 'none',
-    			pieHole : 0.68,
-    			chartArea : {
-    				'width' : '100%',
-    				'height' : '80%'
-    			},
-    			backgroundColor : "transparent",
-    			slices : {
-    				0 : {
-    					color : '#B2C831'
-    				},
-    				1 : {
-    					color : '#3D3D3D'
-    				}
-    			},
-    			fontSize : 15,
-    			//pieStartAngle : 100,
+			legend : 'none',
+			pieSliceText : 'none',
+			pieHole : 0.68,
+			chartArea : {
+				'width' : '100%',
+				'height' : '80%'
+			},
+			backgroundColor : "transparent",
+			slices : {
+				0 : {
+					color : '#B2C831'
+				},
+				1 : {
+					color : '#3D3D3D'
+				}
+			},
+			fontSize : 15,
+		//pieStartAngle : 100,
 
 		};
 
@@ -263,8 +261,8 @@ td : {
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="index.jsp" style="padding: 0px;    padding-right: 20px;
-    padding-top: 5px;"><span><img 
+				<a class="navbar-brand" href="index.jsp"
+					style="padding: 0px; padding-right: 20px; padding-top: 5px;"><span><img
 						src="images/img2.png" width="75px" alt="img error"></span></a>
 			</div>
 			<div class="navbar-collapse collapse">
@@ -465,8 +463,8 @@ td : {
 						<span aria-hidden="true" class="li_news fs2"></span>
 					</div>
 					<br>
-					<div class="text" >
-					<!-- bbc new crawling  -->
+					<div class="text">
+						<!-- bbc new crawling  -->
 						<%-- <p>
 
 							<%
@@ -480,10 +478,26 @@ td : {
 							<%=session.getAttribute("list_len3")%><br> <br>
 
 						</p> --%>
-						<p><a style="color: white;" href="https://www.bbc.com/news/uk-wales-48797659">1. Anglesey crossbow death: Man, 38, charged with murder</a> </p>
-						<p><a style="color: white;" href="https://www.bbc.com/news/uk-england-northamptonshire-48802599">2. Little Harrowden death: Fifth person charged with murder</a></p>
-						<p><a style="color: white;" href="https://www.bbc.com/news/uk-england-hereford-worcester-48790953">3. Droitwich murder: Police search for dog walker</a></p>
-						<p><a style="color: white;" href="https://www.bbc.co.uk/news/uk-england-london-48787365">4. Abdi Ali murder: Man jailed for 'body in attic' murder</a></p>
+						<p>
+							<a style="color: white;"
+								href="https://www.bbc.com/news/uk-wales-48797659">1.
+								Anglesey crossbow death: Man, 38, charged with murder</a>
+						</p>
+						<p>
+							<a style="color: white;"
+								href="https://www.bbc.com/news/uk-england-northamptonshire-48802599">2.
+								Little Harrowden death: Fifth person charged with murder</a>
+						</p>
+						<p>
+							<a style="color: white;"
+								href="https://www.bbc.com/news/uk-england-hereford-worcester-48790953">3.
+								Droitwich murder: Police search for dog walker</a>
+						</p>
+						<p>
+							<a style="color: white;"
+								href="https://www.bbc.co.uk/news/uk-england-london-48787365">4.
+								Abdi Ali murder: Man jailed for 'body in attic' murder</a>
+						</p>
 
 
 
