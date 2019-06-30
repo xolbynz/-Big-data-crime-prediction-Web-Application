@@ -185,7 +185,7 @@ td : {
 			backgroundColor : "transparent",
 			slices : {
 				0 : {
-					color : '#B2C831'
+					color : '#ff4f40'
 				},
 				1 : {
 					color : '#3D3D3D'
@@ -229,7 +229,7 @@ td : {
 			backgroundColor : "transparent",
 			slices : {
 				0 : {
-					color : '#B2C831'
+					color : '#ff4f40'
 				},
 				1 : {
 					color : '#3D3D3D'
@@ -367,32 +367,20 @@ td : {
 					<dtitle>Current Weather</dtitle>
 					<hr style="margin-bottom: 10px;">
 					<div class="cont" align="center" style="margin-top: 15px;">
-
-						<p style="margin: 0px;">
-
-							<%
-								Weather weather = new Weather();
-								weather.newyork(request, response);
-							%>
+						<%
+							Weather weather = new Weather();
+							weather.newyork(request, response);
+						%>
+						<div >
 							<%=session.getAttribute("weat_img")%>
-						</p>
-
-						<p style="margin-left: 40px;">
-							<%-- <%= session.getAttribute("time")%> --%>
-							<%=session.getAttribute("weat_text")%><br> ¿Âµµ :
-							<%=session.getAttribute("tm")%><br> ½Àµµ :
-							<%=session.getAttribute("hm")%><br> Ç³¼Ó :
-							<%=session.getAttribute("ws")%><br>
-
-
-							<%-- ¸ÇÇØÆ° ³¯¾¾ : <%= session.getAttribute("manhattan")%><br>
-							ºê·çÅ¬¸° ³¯¾¾ : <%= session.getAttribute("brooklyn")%><br>
-							Äý½º ³¯¾¾ : <%= session.getAttribute("queens")%><br>
-							ºê·ÕÅ©½º ³¯¾¾ : <%= session.getAttribute("bronx")%><br>
-							½ºÅÂÆ° ³¯¾¾ : <%= session.getAttribute("staten")%><br> --%>
-						</p>
-
-
+						</div>
+						<div >
+							
+							<%=session.getAttribute("weat_text")%><br> 
+							Temp : <%=session.getAttribute("tm")%> ¡ÆC<br> 
+							Humidity : <%=session.getAttribute("hm")%> <br>
+							Wind : <%=session.getAttribute("ws")%> <br>
+						</div>
 					</div>
 				</div>
 
@@ -431,11 +419,11 @@ td : {
 					<hr>
 					<div class="cont">
 						<p>
-							<bold>388</bold>
+							<bold>11</bold>
 						</p>
 						<p>
-							<img src="images/up-small.png" alt=""> 412 Max. | <img
-								src="images/down-small.png" alt=""> 89 Min.
+							<img src="images/up-small.png" alt=""> 11 Max. | <img
+								src="images/down-small.png" alt=""> 3 Min.
 						</p>
 					</div>
 				</div>

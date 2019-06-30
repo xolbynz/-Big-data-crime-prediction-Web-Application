@@ -22,7 +22,7 @@ import org.jsoup.select.Elements;
 public class Weather {
 
 	public void newyork(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "https://www.google.com/search?q=%EB%89%B4%EC%9A%95+%EB%82%A0%EC%94%A8&oq=%EB%89%B4%EC%9A%95+%EB%82%A0%EC%94%A8+&aqs=chrome..69i57j35i39j0l2j69i61j0.7944j1j4&sourceid=chrome&ie=UTF-8";
+		String url = "https://www.google.com/search?hl=en&source=hp&ei=RH4YXbCEM_-Ur7wP_aO-oAw&q=new+york+weather&oq=new+york+weather&gs_l=psy-ab.3..0i70i256j0l9.6283.12737..13129...3.0..2.404.3291.1j17j1j2j1......0....1..gws-wiz.....0..0i10.lZcapVYybwI";
 
 		Document doc = null;
 
@@ -30,7 +30,7 @@ public class Weather {
 
 			doc = Jsoup.connect(url).get();
 
-			Elements time = doc.select("#wob_dts");
+			
 			Elements weat_text = doc.select("#wob_dc");
 			Elements weat_img = doc.select("#wob_tci");
 			Elements tm = doc.select("#wob_tm");
@@ -39,7 +39,7 @@ public class Weather {
 
 			HttpSession session = request.getSession();
 
-			session.setAttribute("time", time);
+			
 			session.setAttribute("weat_text", weat_text);
 			session.setAttribute("weat_img", weat_img);
 			session.setAttribute("tm", tm);

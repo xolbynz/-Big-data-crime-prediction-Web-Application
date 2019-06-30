@@ -103,6 +103,7 @@
 }
 .li_news:before {
 	content: "\e018";
+	color: white;
 }
 .li_mail:before {
 	content: "\e019";
