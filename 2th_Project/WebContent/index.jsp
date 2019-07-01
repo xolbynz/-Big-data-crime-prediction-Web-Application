@@ -188,7 +188,7 @@ td : {
 					color : '#ff4f40'
 				},
 				1 : {
-					color : '#3D3D3D'
+					color : '#4f4f4f'
 				}
 			},
 			fontSize : 15,
@@ -213,9 +213,9 @@ td : {
 	google.charts.setOnLoadCallback(drawChart);
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
-				[ 'Task', 'Hours per Day' ], [ '', 20208 ],
-				[ '', 95883 - 20208 ],
-
+				[ 'Task', 'Hours per Day' ], [ '', 10422],
+				[ '', 31266 ],
+				
 		]);
 
 		var options = {
@@ -232,7 +232,7 @@ td : {
 					color : '#ff4f40'
 				},
 				1 : {
-					color : '#3D3D3D'
+					color : '#4f4f4f'
 				}
 			},
 			fontSize : 15,
@@ -297,7 +297,7 @@ td : {
 								<td colspan="5" align="center" id="calendarYM">yyyy. m</td>
 								<td><label onclick="nextCalendar()"> > </label></td>
 							</tr>
-							<tr>
+							<tr style="font-weight: bold;">
 								<td align="center" style="color: red;">Su</td>
 								<td align="center">Mo</td>
 								<td align="center">Tu</td>
@@ -331,7 +331,7 @@ td : {
 					<dtitle>2019 Crime Rate</dtitle>
 					<hr>
 					<div id="C_rate"></div>
-					<h2>11%</h2>
+					<h2>25%</h2>
 
 				</div>
 			</div>
@@ -396,7 +396,7 @@ td : {
 			<div class="dash-unit" style="height: 500px;">
 				<dtitle>Crime Map</dtitle>
 				<hr style="margin-bottom: 0px">
-				<iframe src="map_ver5.html" width="100%" height="470px"> </iframe>
+				<iframe src="map.html" width="100%" height="470px"> </iframe>
 
 
 			</div>
@@ -502,7 +502,7 @@ td : {
 	</div>
 
 
-	<div style="visibility: hidden;" align="center" id="footerwrap">
+	<div style="visibility: hidden ;" align="center" id="footerwrap">
 
 		<div style="float: left;">
 			<!-- ¸ÇÇÏÆ° -->

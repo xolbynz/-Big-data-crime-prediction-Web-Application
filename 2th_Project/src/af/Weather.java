@@ -55,7 +55,7 @@ public class Weather {
 	public void manhattan(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String url = "https://www.google.com/search?ei=_qYUXfHQArTLmAW1pq_gCw&q=%EB%A7%A8%ED%95%B4%ED%8A%BC+%EB%82%A0%EC%94%A8&oq=%EB%A7%A8%ED%95%B4%ED%8A%BC+%EB%82%A0%EC%94%A8&gs_l=psy-ab.3..35i39i285i70i256j0i30j0i8i30l2j0i5i10i30j0i5i30l2j0i8i10i30.13546.16626..16867...8.0..7.523.3416.1j20j0j1j0j1......0....1..gws-wiz.....10..35i39i285j35i39j0i67j0i131j0j0i20i263j0i10.840f1Bi55TM";
+		String url = "https://www.google.com/search?hl=en&ei=SHoZXeKFHMKe8QWEoLqgDQ&q=manhattan+weather&oq=manhattan+&gs_l=psy-ab.3.0.0i67i70i256j0i67l5j0l4.1194.5119..5857...2.0..0.694.4014.0j8j0j1j0j4......0....1..gws-wiz.....0..0i71j0i131j0i10.EShegm0jOAQ";
 
 		Document doc = null;
 
