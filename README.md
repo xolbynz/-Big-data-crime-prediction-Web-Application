@@ -4,3 +4,4 @@
 
 
 
+realissoman.ipynb  -> 크롤링 , 머신러닝 파이썬 코드 
